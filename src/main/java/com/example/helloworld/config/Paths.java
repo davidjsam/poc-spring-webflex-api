@@ -5,7 +5,7 @@ import java.util.Objects;
 import org.springframework.lang.Nullable;
 import org.springframework.web.util.DefaultUriBuilderFactory;
 
-public sealed interface Paths {
+public interface Paths {
 
     String segment();
 

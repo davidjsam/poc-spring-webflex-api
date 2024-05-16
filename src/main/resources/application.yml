@@ -3,19 +3,26 @@ logging:
     org:
       springframework:
         security: DEBUG
+        context:
+          annotation: DEBUG
+    com:
+      okta:
+        spring: DEBUG
+        
 ---
+
 application:
-  client-origin-url: ${CLIENT_ORIGIN_URL}
+  client-origin-url: http://localhost:4040
 
 server:
   error:
     whitelabel:
       enabled: false
-  port: ${PORT}
+  port: 6060
 
 okta:
   oauth2:
-    issuer: ${OKTA_OAUTH2_ISSUER}
-    audience: ${OKTA_OAUTH2_AUDIENCE}
+    issuer: https://dev-7g6g7ug82m5ecl4i.us.auth0.com/
+    audience: https://hello-world.example.com
 
 ...

@@ -12,6 +12,7 @@ public class LogFilter implements WebFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
+        System.out.println("logging ");
         return chain.filter(exchange)
             .doOnEach(signal -> {
                 if (signal.isOnComplete() || signal.isOnError()) {   final var response = exchange.getResponse();

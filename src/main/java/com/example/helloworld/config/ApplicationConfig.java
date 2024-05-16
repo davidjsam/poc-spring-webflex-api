@@ -33,6 +33,8 @@ public class ApplicationConfig {
         config.setAllowedHeaders(headers);
         config.setAllowedMethods(methods);
         config.setMaxAge(maxAge);
+        
+        System.out.println(config.getAllowedOrigins());
 
         source.registerCorsConfiguration("/**", config);
         return source;
